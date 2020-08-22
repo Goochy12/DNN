@@ -25,6 +25,9 @@ class layer:
     def foward(self, inputs):
         self.output = np.dot(inputs, self.weights) + self.biases
 
+    def backward(self):
+        pass
+
 
 class dnn:
     def __init__(self, inputs):
@@ -48,4 +51,3 @@ X = np.array([[1, 2, 3, 4], [4, 5, 6, 7], [7, 8, 9, 1]])
 if __name__ == "__main__":
     inputs, results = getInputs(os.path.join(
         os.path.dirname(__file__), "iris_flowers.csv"))
-    print(results)
